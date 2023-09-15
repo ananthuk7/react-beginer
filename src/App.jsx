@@ -11,6 +11,7 @@ import UseState from './componenets/Hooks/UseState'
 import UseMemo from './componenets/Hooks/useMemo'
 import { ThemeProvider } from './componenets/Hooks/UseContext'
 import UseReducer from './componenets/Hooks/UseReducer'
+import UseCallBack from './componenets/Hooks/UseCallBack'
 
 
 
@@ -30,7 +31,8 @@ function App() {
       {/* <ThemeProvider>
         <ContextComponenet />
       </ThemeProvider> */}
-      <UseReducer />
+      {/* <UseReducer /> */}
+      <UseCallBack />
 
     </div>
   )
