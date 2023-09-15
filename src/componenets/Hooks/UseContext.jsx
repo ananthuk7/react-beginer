@@ -2,17 +2,23 @@ import React, { useContext, useState } from 'react'
 
 const ThemeChange = React.createContext()
 
-export function ThemeContext() {
+export function useThemeContext() {
     return useContext(ThemeChange)
 }
 
 export const ThemeProvider = ({ children }) => {
 
-    const [theme, changeTheme] = useState(false)
+    const [theme, changeTheme] = useState('dark')
 
-    return <ThemeChange.Provider value={theme}>
+    function setTheme() {
+        changeTheme((prev => prev == 'dark' ? 'light' : 'dark'))
+        const body = document.querySelector('body');
+        body.style.backgroundColor = `${theme == 'dark' ? 'black' : 'white'}`
+    }
+    console.log(theme);
+
+    return <ThemeChange.Provider value={{ theme, setTheme }}>
         {children}
     </ThemeChange.Provider>
 }
 
-export default UseContext

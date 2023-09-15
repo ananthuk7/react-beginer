@@ -1,4 +1,5 @@
 import './App.css'
+import ContextComponenet from './componenets/Hooks/ContextComponenet'
 import UseEffectHook from './componenets/Hooks/UseEffectHook'
 import UseRef from './componenets/Hooks/UseRef'
 // import TodoWrapper from './componenets/TodoWrapper'
@@ -8,6 +9,8 @@ import UseRef from './componenets/Hooks/UseRef'
 // import ApiCall from './componenets/Apicall/ApiCall'
 import UseState from './componenets/Hooks/UseState'
 import UseMemo from './componenets/Hooks/useMemo'
+import { ThemeProvider } from './componenets/Hooks/UseContext'
+import UseReducer from './componenets/Hooks/UseReducer'
 
 
 
@@ -23,7 +26,11 @@ function App() {
       {/* <UseState /> */}
       {/* <UseEffectHook /> */}
       {/* <UseMemo /> */}
-      <UseRef />
+      {/* <UseRef /> */}
+      {/* <ThemeProvider>
+        <ContextComponenet />
+      </ThemeProvider> */}
+      <UseReducer />
 
     </div>
   )
